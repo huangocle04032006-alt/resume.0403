@@ -1,123 +1,237 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>個人簡歷 — 許玉麗</title>
-  <style>
-    :root{
-      --accent:#2b6cb0;
-      --muted:#666;
-      --card-bg:#fff;
-      --page-bg:#f4f6f8;
-      --radius:12px;
-      font-family: "Helvetica Neue", Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-    }
-    html,body{height:100%;margin:0;background:var(--page-bg);color:#222;}
-    .container{max-width:900px;margin:32px auto;padding:28px;background:var(--card-bg);border-radius:var(--radius);box-shadow:0 8px 30px rgba(20,20,40,0.08);}
-    .header{display:flex;gap:20px;align-items:center;border-bottom:1px solid #e6e9ee;padding-bottom:18px;margin-bottom:18px;}
-    .photo{width:120px;height:120px;border-radius:10px;overflow:hidden;background:#ddd;flex:0 0 120px;display:flex;align-items:center;justify-content:center;color:#777;font-weight:bold;}
-    .photo img{width:100%;height:100%;object-fit:cover;display:block;}
-    .name{font-size:24px;font-weight:700;margin:0;padding:0;}
-    .meta{color:var(--muted);margin-top:6px;}
-    .contact{display:flex;gap:18px;flex-wrap:wrap;margin-top:8px;color:var(--muted);}
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:22px;}
-    @media (max-width:880px){ .grid{grid-template-columns:1fr; } .header{flex-direction:row;} .photo{width:96px;height:96px;flex:0 0 96px;}}
-    .card{background:linear-gradient(180deg,#fff,#fbfdff);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(15,30,80,0.04); }
-    h3{margin:0 0 8px 0;font-size:16px;color:var(--accent);}
-    p.meta-small{margin:0;color:var(--muted);font-size:14px;}
-    ul.simple{list-style:none;padding:0;margin:0;}
-    ul.simple li{padding:6px 0;border-bottom:1px dashed #efeff3;color:#333;}
-    .skills span{display:inline-block;background:#eef6ff;padding:6px 10px;border-radius:999px;margin:6px 8px 0 0;font-size:13px;}
-    .section{margin-bottom:18px;}
-    .small-muted{font-size:13px;color:var(--muted);}
-    .goal{background:#fff7ed;padding:12px;border-radius:8px;border:1px solid #ffe5bf;}
-    .footer-note{font-size:13px;color:var(--muted);margin-top:12px;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>個人履歷</title>
+<style>
+body {
+font-family: 'Noto Sans TC', sans-serif;
+background: #f4f6f9;
+margin: 0;
+padding: 30px;
+}
+
+.resume {
+max-width: 900px;
+margin: auto;
+background: white;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+overflow: hidden;
+}
+
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: #fff;
+border-bottom: 1px solid #eee;
+padding: 20px 30px;
+}
+
+.header h1 {
+font-size: 22px;
+margin: 0;
+color: #333;
+}
+
+.header button {
+background: #0078d7;
+border: none;
+color: white;
+padding: 8px 16px;
+border-radius: 6px;
+cursor: pointer;
+font-size: 14px;
+}
+
+.main {
+display: flex;
+flex-wrap: wrap;
+padding: 25px 30px;
+background: #fff;
+}
+
+.left-column {
+width: 35%;
+min-width: 250px;
+text-align: center;
+border-right: 1px solid #eee;
+padding-right: 20px;
+}
+
+.avatar {
+width: 150px;
+height: 150px;
+overflow: hidden;
+border-radius: 10px;
+border: 3px solid #fff;
+box-shadow: 0 0 6px rgba(0,0,0,0.1);
+margin: 0 auto;
+}
+
+.avatar img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.stu-id {
+margin-top: 10px;
+font-weight: bold;
+color: #333;
+font-size: 14px;
+}
+
+.right-column {
+flex: 1;
+padding-left: 25px;
+}
+
+.info h2 {
+font-size: 22px;
+color: #333;
+margin: 0 0 5px 0;
+}
+
+.info p {
+margin: 3px 0;
+font-size: 14px;
+color: #444;
+}
+
+.skill-section {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+
+.block {
+flex: 1;
+min-width: 120px;
+margin-right: 15px;
+}
+
+h3 {
+color: #0078d7;
+font-size: 16px;
+margin-top: 10px;
+margin-bottom: 8px;
+}
+
+.tags span {
+display: inline-block;
+background: #e8f2ff;
+color: #0078d7;
+border-radius: 8px;
+padding: 5px 10px;
+margin: 3px;
+font-size: 13px;
+}
+
+section {
+padding: 0 30px 30px 30px;
+line-height: 1.8;
+color: #333;
+font-size: 15px;
+}
+
+ul {
+padding-left: 20px;
+}
+
+footer {
+background: #fafafa;
+border-top: 1px solid #eee;
+text-align: center;
+color: #777;
+font-size: 13px;
+padding: 10px;
+}
+</style>
 </head>
 <body>
-  <div class="container" role="main">
-    <header class="header" aria-label="個人資訊">
-      <div class="photo" aria-hidden="true">
-        <!-- 替換為你的個人照片：把下面 <img> 的 src 換成照片檔案路徑或網址 -->
-        <!-- 例如: <img src="photo.jpg" alt="個人照片"> -->
-        <img src="2006.JPG" alt="個人照片">
-      </div>
+<div class="resume">
+<div class="header">
+<h1>Resume20251020abc · 許玉麗</h1>
+<button onclick="window.print()">列印 / 存為 PDF</button>
+</div>
 
-      <div style="flex:1">
-        <h1 class="name">許玉麗</h1>
-        <div class="meta">學號：114011122· 亞洲大學 一年級</div>
-        <div class="contact" aria-label="聯絡資訊">
-          <div class="meta-small">Email: huangocle.04032006@gmail.com</div>
-          <div class="meta-small">電話: (09) 1234-5678</div>
-          <div class="meta-small">地點: 台中市, 台灣</div>
-        </div>
-      </div>
-    </header>
+<div class="main">
+<div class="left-column">
+<div class="avatar">
+<img src="c:\Users\user\Downloads\resume.0403\profile_photo.jpg.jpg" alt="許玉麗照片">
+</div>
+<div class="stu-id">學號：114011122</div>
+</div>
 
-    <div class="grid">
-      <!-- 左側主欄 -->
-      <main>
-        <section class="card section" aria-labelledby="intro">
-          <h3 id="intro">個人簡介</h3>
-          <p>我是亞洲大學一年級學生（學號 114011122），目標成為廚師並在未來經營自己的咖啡館。具備基礎文書處理能力，對餐飲與烘焙有濃厚興趣，樂於團隊合作與實作學習。</p>
-        </section>
+<div class="right-column">
+<div class="info">
+<h2>許玉麗</h2>
+<p><strong>學校：</strong>亞洲大學 一年級</p>
+<p><strong>Email：</strong>huangocle.04032006@gmail.com</p>
+<p><strong>電話：</strong>0984-087-979</p>
+<p><strong>地點：</strong>台中市，台灣</p>
+</div>
 
-        <section class="card section" aria-labelledby="projects">
-          <h3 id="projects">實作 / 專案</h3>
-          <ul class="simple">
-            <li><strong>校園烘焙社實習：</strong>參與基礎甜點製作與咖啡拉花練習（課外活動）。</li>
-            <li><strong>個人小型食譜整理：</strong>整理並記錄常用食譜，嘗試改良配方與分享給同學。</li>
-          </ul>
-        </section>
+<div class="skill-section">
+<div class="block">
+<h3>技能</h3>
+<div class="tags">
+<span>基礎文書處理</span>
+<span>HTML / CSS / JavaScript（基礎）</span>
+<span>西點 / 烹飪</span>
+</div>
+</div>
 
-        <section class="card section" aria-labelledby="work">
-          <h3 id="work">工作經驗</h3>
-          <p class="small-muted">目前無正式工作經驗 — 有志於從基礎學徒或兼職廚房助理做起，累積實務能力。</p>
-        </section>
+<div class="block">
+<h3>語言</h3>
+<div class="tags">
+<span>越南語（母語）</span>
+<span>中文（基礎）</span>
+</div>
+</div>
 
-        <section class="card section" aria-labelledby="career">
-          <h3 id="career">職涯目標</h3>
-          <div class="goal">
-            <p><strong>短期：</strong>在餐飲業累積廚房經驗。</p>
-            <p><strong>長期：</strong>成為專業廚師並開設自己的咖啡館/餐廳。</p>
-          </div>
-        </section>
-      </main>
+<div class="block">
+<h3>興趣</h3>
+<div class="tags">
+<span>繪畫</span>
+<span>運動</span>
+<span>烹飪</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-      <!-- 右側側欄 -->
-      <aside>
-        <section class="card section" aria-labelledby="skills">
-          <h3 id="skills">技能</h3>
-          <div class="skills">
-            <span>基礎文書處理</span>
-            <span>HTML / CSS / JavaScript (基礎)</span>
-            <span>西點 / 基礎烹飪</span>
-            <span>團隊合作</span>
-          </div>
-        </section>
+<section>
+<h3>個人簡介</h3>
+<p>我是亞洲大學一年級學生，熱愛藝術與創作。對繪畫、設計與美感表達有高度興趣，喜歡挑戰新事物。<br>
+目前無正式工作經驗 — 有志於從基礎學習與練習繪畫，不斷提升自己的藝術能力。</p>
 
-        <section class="card section" aria-labelledby="languages">
-          <h3 id="languages">語言</h3>
-          <p class="meta-small">越南文（母語） · 中文（基礎）</p>
-        </section>
+<img src="school.jpg" alt="校園照片" style="width:100%;border-radius:8px;margin-top:10px;">
 
-        <section class="card section" aria-labelledby="hobbies">
-          <h3 id="hobbies">興趣</h3>
-          <p class="meta-small">球類運動、烹飪、咖啡文化</p>
-        </section>
+<h3>學歷</h3>
+<p>亞洲大學 — 在學中・一年級</p>
 
-        <section class="card section" aria-labelledby="education">
-          <h3 id="education">學歷</h3>
-          <p class="meta-small"><strong>亞洲大學</strong><br>在學中 · 一年級<br>入學年份：2024</p>
-        </section>
-      </aside>
-    </div>
+<h3>實作 / 專案</h3>
+<ul>
+<li>校園繪畫學習：參與校內各類繪畫作品觀摩與練習。</li>
+<li>個人創作作品：擁有多幅個人繪畫創作，風格多樣。</li>
+</ul>
 
-    <div class="footer-note">
-      <!-- 可放備註或更新日期 -->
-      最後更新：<span id="updated">2025/10/23</span>
-    </div>
-  </div>
+<h3>工作經驗</h3>
+<p>目前無正式工作經驗 — 持續學習與練習以累積實務能力。</p>
+
+<h3>職涯目標</h3>
+<p>希望在未來學習與探索中，不斷累積新的知識與技能，最終成為一位充滿創意與熱情的畫家（Hoạ sĩ）。</p>
+</section>
+
+<footer>
+這是一份自動產生的個人履歷範本，可按「列印 / 存為 PDF」輸出正式檔案。
+</footer>
+</div>
 </body>
 </html>
